@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 레저·체험</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub22.css}">
+</head>
+<body>
+<div class="wrap">
+
+    <section class="sub_visual">
+        <img th:src="@{/images/common/sub2.jpg}" alt="서브 이미지2" class="visual_img">
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+        <h3 class="sub_title">레저·체험</h3>
+    </section>
+
+    <!-- Tab & Breadcrumb -->
+    <div class="tab-bx">
+        <div class="inner">
+            <div class="bread-crumb">
+                <a th:href="@{/}">HOME</a>
+                <a href="#">즐길거리</a>
+                <a href="#">레저·체험</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main>
+        <div class="content-area">
+
+            <!-- Region Filter -->
+            <div class="check-bx">
+                <h4>지역</h4>
+                <fieldset>
+                    <div><input type="checkbox" id="area_all"><label for="area_all">전체</label></div>
+                    <div><input type="checkbox" id="area_cc"><label for="area_cc">춘천시</label></div>
+                    <div><input type="checkbox" id="area_wj"><label for="area_wj">원주시</label></div>
+                    <div><input type="checkbox" id="area_gn"><label for="area_gn">강릉시</label></div>
+                    <div><input type="checkbox" id="area_dh"><label for="area_dh">동해시</label></div>
+                    <div><input type="checkbox" id="area_tb"><label for="area_tb">태백시</label></div>
+                    <div><input type="checkbox" id="area_sc"><label for="area_sc">속초시</label></div>
+                    <div><input type="checkbox" id="area_sck"><label for="area_sck">삼척시</label></div>
+                    <div><input type="checkbox" id="area_hcg"><label for="area_hcg">홍천군</label></div>
+                    <div><input type="checkbox" id="area_hs"><label for="area_hs">횡성군</label></div>
+                    <div><input type="checkbox" id="area_yw"><label for="area_yw">영월군</label></div>
+                    <div><input type="checkbox" id="area_pc"><label for="area_pc">평창군</label></div>
+                    <div><input type="checkbox" id="area_js"><label for="area_js">정선군</label></div>
+                    <div><input type="checkbox" id="area_cw"><label for="area_cw">철원군</label></div>
+                    <div><input type="checkbox" id="area_hc"><label for="area_hc">화천군</label></div>
+                    <div><input type="checkbox" id="area_yg"><label for="area_yg">양구군</label></div>
+                    <div><input type="checkbox" id="area_ij"><label for="area_ij">인제군</label></div>
+                    <div><input type="checkbox" id="area_gs"><label for="area_gs">고성군</label></div>
+                    <div><input type="checkbox" id="area_yy"><label for="area_yy">양양군</label></div>
+                </fieldset>
+                <input type="submit" value="검색" class="skinBtnBo">
+            </div>
+
+            <!-- Search Area -->
+            <div class="search-area">
+                <select>
+                    <option value="" selected>전체</option>
+                    <option value="B">최신순</option>
+                    <option value="H">인기순</option>
+                </select>
+                <select>
+                    <option value="TITLE" selected>제목</option>
+                    <option value="CONTENT">내용</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력해주세요.">
+                <input type="submit" value="검색">
+            </div>
+
+            <!-- Attraction List -->
+            <div class="attraction-list">
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#과학관</i><img th:src="@{/images/sub22/sub2_01.jpg}" alt="국립강원전문과학관"></div>
+                    <div class="text"><em>원주시</em><strong>국립강원전문과학관</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#나루터</i><img th:src="@{/images/sub22/sub2_02.jpg}" alt="킹카누나루터"></div>
+                    <div class="text"><em>춘천시</em><strong>킹카누나루터</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#등산</i><img th:src="@{/images/sub22/sub2_03.jpg}" alt="국립등산학교"></div>
+                    <div class="text"><em>속초시</em><strong>국립등산학교</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#얼라이브하트</i><img th:src="@{/images/sub22/sub2_04.jpg}" alt="얼라이브하트"></div>
+                    <div class="text"><em>속초시</em><strong>얼라이브하트</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#테라크랩팜</i><img th:src="@{/images/sub22/sub2_05.jpg}" alt="테라크랩팜"></div>
+                    <div class="text"><em>속초시</em><strong>테라크랩팜</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#래프팅</i><img th:src="@{/images/sub22/sub2_06.jpg}" alt="동강래프팅"></div>
+                    <div class="text"><em>영월군</em><strong>동강래프팅</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#리버버깅</i><img th:src="@{/images/sub22/sub2_07.jpg}" alt="리버버깅"></div>
+                    <div class="text"><em>영월군</em><strong>리버버깅</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#바이크</i><img th:src="@{/images/sub22/sub2_08.jpg}" alt="산악바이크(ATV)"></div>
+                    <div class="text"><em>영월군</em><strong>산악바이크(ATV)</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#패러글라이딩</i><img th:src="@{/images/sub22/sub2_09.jpg}" alt="패러글라이딩"></div>
+                    <div class="text"><em>영월군</em><strong>패러글라이딩</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#카트체험장</i><img th:src="@{/images/sub22/sub2_10.jpg}" alt="한반도전기카트체험장"></div>
+                    <div class="text"><em>영월군</em><strong>한반도전기카트체험장</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#해상케이블카</i><img th:src="@{/images/sub22/sub2_11.jpg}" alt="삼척 해상케이블카"></div>
+                    <div class="text"><em>삼척시</em><strong>삼척 해상케이블카</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#과학관</i><img th:src="@{/images/sub22/sub2_12.jpg}" alt="홍천생명건강과학관"></div>
+                    <div class="text"><em>홍천군</em><strong>홍천생명건강과학관</strong></div>
+                </a>
+            </div>
+
+            <!-- Pager -->
+            <div class="pager">
+                <a href="#" class="nav-btn">&laquo;</a>
+                <a href="#" class="nav-btn">&lsaquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="nav-btn">&rsaquo;</a>
+                <a href="#" class="nav-btn">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- Download -->
+        <a href="#" class="form-down">
+            <img th:src="@{/images/sub22/sub2_13.jpg}" alt="신청양식 다운로드">
+        </a>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

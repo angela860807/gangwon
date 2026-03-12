@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 축제·행사</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub21.css}">
+</head>
+<body>
+<div class="wrap">
+
+    <section class="sub_visual">
+        <img th:src="@{/images/common/sub2.jpg}" alt="서브 이미지2" class="visual_img">
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+        <h3 class="sub_title">축제·행사</h3>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="tab-bx">
+        <div class="inner">
+            <div class="bread-crumb">
+                <a th:href="@{/}">HOME</a>
+                <a href="#">즐길거리</a>
+                <a href="#">축제·행사</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main>
+        <div class="content-area">
+            <h4 class="content-title">
+                1년 365일 언제나 축제 중!
+                <img th:src="@{/images/sub21/sub1_01.png}" alt="">
+            </h4>
+
+            <div class="festival-list">
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <i class="badge">행사중</i>
+                        <img th:src="@{/images/sub21/sub1_02.png}" alt="국립수목원 &amp; 산림박물관 공동기획전">
+                    </div>
+                    <div class="text">
+                        <strong>국립수목원 &amp; 산림박물관 공동기획전 「소나무-문화를 만들다」</strong>
+                        <div class="info"><em>기간</em><span>2025-10-31 ~ 2026-02-28</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 춘천시 화목원길 24 산림박물관</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_03.png}" alt="안흥찐빵축제">
+                    </div>
+                    <div class="text">
+                        <strong>안흥찐빵축제</strong>
+                        <div class="info"><em>기간</em><span>2025-11-07 ~ 2025-11-09</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 횡성군 안흥면 주천강로 1868</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_04.png}" alt="홍천 인삼한우 명품축제">
+                    </div>
+                    <div class="text">
+                        <strong>홍천 인삼한우 명품축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-30 ~ 2025-11-02</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 홍천군 홍천읍 갈마곡리 501 도시산림공원 토리숲</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_05.png}" alt="홍천 사과축제">
+                    </div>
+                    <div class="text">
+                        <strong>홍천 사과축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-30 ~ 2025-11-02</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 홍천군 홍천읍 갈마곡리 501</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_06.png}" alt="강릉커피축제">
+                    </div>
+                    <div class="text">
+                        <strong>강릉커피축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-30 ~ 2025-11-02</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 강릉시 창해로14번길 20-1 (견소동)</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_07.png}" alt="보현사 산사천년문화제">
+                    </div>
+                    <div class="text">
+                        <strong>보현사 산사천년문화제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-25 ~ 2025-10-26</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 강릉시 성산면 보현길 396</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_08.png}" alt="2025 양양연어축제">
+                    </div>
+                    <div class="text">
+                        <strong>2025 양양연어축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-24 ~ 2025-10-26</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 양양군 양양읍 일출로 589</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_09.png}" alt="김삿갓 문화제">
+                    </div>
+                    <div class="text">
+                        <strong>김삿갓 문화제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-17 ~ 2025-10-19</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 영월군 김삿갓면 김삿갓로 216-22</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_10.png}" alt="고성명태축제">
+                    </div>
+                    <div class="text">
+                        <strong>고성명태축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-17 ~ 2025-10-19</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 고성군 거진읍 대대리 11리 해변</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_11.png}" alt="2025 춘천막국수닭갈비축제">
+                    </div>
+                    <div class="text">
+                        <strong>2025 춘천막국수닭갈비축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-16 ~ 2025-10-19</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 춘천시 온의동 586 공지천 산책로 일원</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_12.png}" alt="2025 양양송이축제">
+                    </div>
+                    <div class="text">
+                        <strong>2025 양양송이축제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-10 ~ 2025-10-12</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 양양군 양양읍 일출로 589</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_13.png}" alt="태백제">
+                    </div>
+                    <div class="text">
+                        <strong>태백제</strong>
+                        <div class="info"><em>기간</em><span>2025-10-02 ~ 2025-10-03</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 태백시 황지연못길 12 (황지동) 황지연못</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_14.png}" alt="인제가을꽃축제">
+                    </div>
+                    <div class="text">
+                        <strong>인제가을꽃축제</strong>
+                        <div class="info"><em>기간</em><span>2025-09-27 ~ 2025-10-19</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 인제군 북면 용대리 1821-2 용대관광지 일원</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_15.png}" alt="화목원 국화전시회">
+                    </div>
+                    <div class="text">
+                        <strong>화목원 국화전시회</strong>
+                        <div class="info"><em>기간</em><span>2025-09-26 ~ 2025-11-02</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 춘천시 화목원길 24</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_16.gif}" alt="제17회 한강 역사 및 생태·문화 사진전">
+                    </div>
+                    <div class="text">
+                        <strong>제17회 한강 역사 및 생태·문화 사진전</strong>
+                        <div class="info"><em>기간</em><span>2025-09-27 ~ 2025-10-24</span></div>
+                        <div class="info"><em>장소</em><span>강원특별자치도 춘천시 화목원길 24 산림박물관</span></div>
+                    </div>
+                </a>
+
+                <a href="#" class="festival-card">
+                    <div class="thumb">
+                        <img th:src="@{/images/sub21/sub1_17.jpg}" alt="우리숲페스타">
+                    </div>
+                    <div class="text">
+                        <strong>우리숲페스타</strong>
+                        <div class="info"><em>기간</em><span>2025-09-20 ~ 2025-09-21</span></div>
+                        <div class="info"><em>장소</em><span>강원 횡성군 둔내면 청태산로 777 국립횡성숲체원 일대</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Pager -->
+            <div class="pager">
+                <a href="#" class="nav-btn">&laquo;</a>
+                <a href="#" class="nav-btn">&lsaquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="nav-btn">&rsaquo;</a>
+                <a href="#" class="nav-btn">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- YouTube Section -->
+        <section class="youtube-section">
+            <div class="inner">
+                <h4 class="content-title">
+                    잊지못할 그때 그 축제의 현장
+                    <img th:src="@{/images/sub21/sub1_18.png}" alt="">
+                    <a href="https://www.youtube.com/@user-jp2iu5yi4k" target="_blank" rel="noopener noreferrer">유튜브 바로가기 &rarr;</a>
+                </h4>
+                <div class="video-slider">
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="gUUgqnrseaI">
+                            <img src="https://img.youtube.com/vi/gUUgqnrseaI/mqdefault.jpg" alt="화천토마토축제 홍보영상">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>화천토마토축제 홍보영상</strong>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="_1RkV-0ouZk">
+                            <img src="https://img.youtube.com/vi/_1RkV-0ouZk/mqdefault.jpg" alt="2023춘천막국수닭갈비축제">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>2023춘천막국수닭갈비축제</strong>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="XAnNLdsSq8E">
+                            <img src="https://img.youtube.com/vi/XAnNLdsSq8E/mqdefault.jpg" alt="2023얼음나라화천 산천어축제 홍보영상">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>2023얼음나라화천 산천어축제 홍보영상</strong>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="o8Q9M_VIMKw">
+                            <img src="https://img.youtube.com/vi/o8Q9M_VIMKw/mqdefault.jpg" alt="제30회 태백산 눈축제 스팟영상">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>제30회 태백산 눈축제 스팟영상</strong>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="pJ05Or92jK0">
+                            <img src="https://img.youtube.com/vi/pJ05Or92jK0/mqdefault.jpg" alt="강원도립극단 창립 10주년 기념영상">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>강원도립극단 창립 10주년 기념영상</strong>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrap" data-id="xJupGpZ1V1Q">
+                            <img src="https://img.youtube.com/vi/xJupGpZ1V1Q/mqdefault.jpg" alt="강릉의 봄">
+                            <button class="play-btn" aria-label="재생"></button>
+                        </div>
+                        <strong>강릉의 봄</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

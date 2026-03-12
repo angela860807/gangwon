@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - K-한류</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub23.css}">
+</head>
+<body>
+<div class="wrap">
+
+    <section class="sub_visual">
+        <img th:src="@{/images/common/sub2.jpg}" alt="서브 이미지2" class="visual_img">
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+        <h3 class="sub_title">K-한류</h3>
+    </section>
+
+    <div class="tab-bx">
+        <div class="inner">
+            <div class="bread-crumb">
+                <a th:href="@{/}">HOME</a>
+                <a href="#">즐길거리</a>
+                <a href="#">K-한류</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="title-banner">
+            <img th:src="@{/images/sub23/sub3_01.png}" alt="K-가 사랑한 강원특별자치도 촬영지">
+        </div>
+
+        <div class="map-section">
+            <div class="inner">
+                <div class="map-area">
+                    <img th:src="@{/images/sub23/sub3_02.jpg}" alt="강원도 지도" class="map-img">
+                    <div class="map-pins">
+                        <a href="#" class="active">춘천</a>
+                        <a href="#">원주</a>
+                        <a href="#">강릉</a>
+                        <a href="#">속초</a>
+                        <a href="#">삼척</a>
+                        <a href="#">태백</a>
+                        <a href="#">인제</a>
+                        <a href="#">고성</a>
+                        <a href="#">양양</a>
+                        <a href="#">횡성</a>
+                        <a href="#">평창</a>
+                        <a href="#">영월</a>
+                        <a href="#">정선</a>
+                        <span>동해</span>
+                        <span>철원</span>
+                        <span>화천</span>
+                        <span>양구</span>
+                        <span>홍천</span>
+                    </div>
+                </div>
+                <div class="location-list">
+                    <a href="#" class="location-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_03.png}" alt="제이드가든"></div>
+                        <div class="info">
+                            <h4>제이드가든</h4>
+                            <div class="detail"><strong>콘텐츠명</strong><span>BTS 촬영지</span></div>
+                            <div class="detail"><strong>주소</strong><span>강원 춘천시 남산면 햇골길 80 제이드가든수목원</span></div>
+                        </div>
+                    </a>
+                    <a href="#" class="location-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_04.png}" alt="강촌폐역"></div>
+                        <div class="info">
+                            <h4>강촌폐역</h4>
+                            <div class="detail"><strong>콘텐츠명</strong><span>BTS 촬영지</span></div>
+                            <div class="detail"><strong>주소</strong><span>강원 춘천시 남산면 강촌로 34</span></div>
+                        </div>
+                    </a>
+                    <a href="#" class="location-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_05.png}" alt="용화산"></div>
+                        <div class="info">
+                            <h4>용화산</h4>
+                            <div class="detail"><strong>콘텐츠명</strong><span>BTS 촬영지</span></div>
+                        </div>
+                    </a>
+                    <a href="#" class="location-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_06.png}" alt="해피초원목장"></div>
+                        <div class="info">
+                            <h4>해피초원목장</h4>
+                            <div class="detail"><strong>콘텐츠명</strong><span>BTS 촬영지</span></div>
+                            <div class="detail"><strong>주소</strong><span>강원 춘천시 사북면 춘화로 330-48 해피초원목장</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Section -->
+        <section class="category-section">
+            <div class="inner">
+                <div class="category-header">
+                    <div class="icon"><img th:src="@{/images/sub23/sub3_07.png}" alt="영화"></div>
+                    <div class="text">
+                        <h4>영화에 나왔던 그곳!</h4>
+                        <p>스크린 속 촬영지, 구석구석 어디를 둘러봐도 다 촬영지 같잖아?</p>
+                    </div>
+                </div>
+                <div class="filming-list">
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_08.png}" alt="왕곡마을"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>왕곡마을</strong><p class="location">고성군 <em>- 동주 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_10.png}" alt="가진항"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>가진항</strong><p class="location">고성군 <em>- 군함도 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_11.png}" alt="웰컴투동막골"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>웰컴투동막골</strong><p class="location">평창군 <em>- 웰컴투동막골 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_12.png}" alt="라디오스타박물관"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>라디오스타박물관</strong><p class="location">영월군 <em>- 라디오스타 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_13.png}" alt="무건리 이끼폭포"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>무건리 이끼폭포</strong><p class="location">삼척시 <em>- 옥자 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_14.png}" alt="죽서루"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>죽서루</strong><p class="location">삼척시 <em>- 외출 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_15.png}" alt="대나무숲/맹방해수욕장"><div class="badge"><img th:src="@{/images/sub23/sub3_09.png}" alt="영화"></div></div>
+                        <div class="text"><strong>대나무숲/맹방해수욕장</strong><p class="location">삼척시 <em>- 봄날은 간다 -</em></p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drama Section -->
+        <section class="category-section">
+            <div class="inner">
+                <div class="category-header">
+                    <div class="icon"><img th:src="@{/images/sub23/sub3_16.png}" alt="드라마"></div>
+                    <div class="text">
+                        <h4>앗! 드라마에서 본 곳이 바로 여기라고?</h4>
+                        <p>드라마 속 명장면의 배경이 된 강원도 촬영지를 만나보세요.</p>
+                    </div>
+                </div>
+                <div class="filming-list">
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_17.png}" alt="자작나무숲"><div class="badge"><img th:src="@{/images/sub23/sub3_18.png}" alt="드라마"></div></div>
+                        <div class="text"><strong>자작나무숲</strong><p class="location">인제군 <em>- 킹덤 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_19.png}" alt="별마로천문대"><div class="badge"><img th:src="@{/images/sub23/sub3_18.png}" alt="드라마"></div></div>
+                        <div class="text"><strong>별마로천문대</strong><p class="location">영월군 <em>- 사랑의불시착 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_20.png}" alt="태양의 후예 공원"><div class="badge"><img th:src="@{/images/sub23/sub3_18.png}" alt="드라마"></div></div>
+                        <div class="text"><strong>태양의 후예 공원</strong><p class="location">태백시 <em>- 태양의후예 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_21.png}" alt="주문진항"><div class="badge"><img th:src="@{/images/sub23/sub3_18.png}" alt="드라마"></div></div>
+                        <div class="text"><strong>주문진항</strong><p class="location">강릉시 <em>- 도깨비 -</em></p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section class="category-section">
+            <div class="inner">
+                <div class="category-header">
+                    <div class="icon"><img th:src="@{/images/sub23/sub3_22.png}" alt="음악"></div>
+                    <div class="text">
+                        <h4>음악처럼 감동적인 그곳</h4>
+                        <p>뮤직비디오와 화보 촬영지로 유명한 강원도의 아름다운 명소들.</p>
+                    </div>
+                </div>
+                <div class="filming-list">
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_23.jpg}" alt="낙산해변"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>낙산해변</strong><p class="location">양양군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_25.png}" alt="능파대"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>능파대</strong><p class="location">고성군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_26.png}" alt="엑스게임리조트"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>엑스게임리조트</strong><p class="location">인제군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_27.png}" alt="병방치 스카이워크"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>병방치 스카이워크</strong><p class="location">정선군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_28.png}" alt="하이원리조트"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>하이원리조트</strong><p class="location">정선군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_29.png}" alt="대관령삼양목장"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>대관령삼양목장</strong><p class="location">평창군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_30.png}" alt="미술관 자작나무숲 게스트하우스"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>미술관 자작나무숲 게스트하우스</strong><p class="location">횡성군 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_31.png}" alt="바다부채길"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>바다부채길</strong><p class="location">강릉시 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_32.png}" alt="BTS버스정류장"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>BTS버스정류장</strong><p class="location">강릉시 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_33.png}" alt="뮤지엄산"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>뮤지엄산</strong><p class="location">원주시 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_03.png}" alt="제이드가든"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>제이드가든</strong><p class="location">춘천시 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                    <a href="#" class="filming-card">
+                        <div class="thumb"><img th:src="@{/images/sub23/sub3_04.png}" alt="강촌폐역"><div class="badge"><img th:src="@{/images/sub23/sub3_24.png}" alt="음악"></div></div>
+                        <div class="text"><strong>강촌폐역</strong><p class="location">춘천시 <em>- BTS 촬영지 -</em></p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

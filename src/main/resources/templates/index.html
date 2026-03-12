@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div class="wrap">
+    <section class="video-background">
+        <video id="bgVideo" autoplay muted playsinline poster="">
+            <source type="video/mp4" th:src="@{/movies/mainvideo.mp4}"/>
+        </video>
+        <button id="muteToggle" onclick="var v=document.getElementById('bgVideo');v.muted=!v.muted;this.textContent=v.muted?'🔇 소리 켜기':'🔊 소리 끄기'">🔇 소리 켜기</button>
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+    </section>
+
+    <section class="page1" id="page1">
+        <div class="page_wrap">
+            <div class="page_grid">
+                <div class="row1-title">
+                    <h2>Season's Pick</h2>
+                </div>
+                <div class="row1">
+                    <figure id="s_thumb1" class="s_thumb">
+                        <a th:href="@{/sub/sub11}">
+                            <img th:src="@{/images/index/s_thumb1_spring.jpg}" alt="강원도의 봄">
+                        </a>
+                    </figure>
+                    <figure id="s_thumb2" class="s_thumb">
+                        <a th:href="@{/sub/sub11}">
+                            <img th:src="@{/images/index/s_thumb2_summer.png}" alt="강원도의 여름">
+                        </a>
+                    </figure>
+                    <figure id="s_thumb3" class="s_thumb">
+                        <a th:href="@{/sub/sub11}">
+                            <img th:src="@{/images/index/s_thumb3_autumn.jpg}" alt="강원도의 가을">
+                        </a>
+                    </figure>
+                    <figure id="s_thumb4" class="s_thumb">
+                        <a th:href="@{/sub/sub11}">
+                            <img th:src="@{/images/index/s_thumb4_winter.jpg}" alt="강원도의 겨울">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page page2" id="page2">
+        <div class="page_wrap">
+            <div class="page_grid">
+                <div class="row2">
+                    <div class="row2-title">
+                        <h2>지금,</h2>
+                        <h2>강원을 발견할 시간!</h2>
+                    </div>
+                    <figure id="big_thumb1" class="big-thumb span-2">
+                        <a th:href="@{/sub/sub22}">
+                            <img th:src="@{/images/index/big_thumb1_winter1.jpg}" alt="강원도의 겨울레저">
+                        </a>
+                    </figure>
+                </div>
+                <div class="row3">
+                    <figure id="big_thumb2" class="big-thumb span-2">
+                        <a th:href="@{/sub/sub22}">
+                            <img th:src="@{/images/index/big_thumb2_summer1.jpg}" alt="강원도의 여름레저">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

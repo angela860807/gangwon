@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${mode == 'edit'} ? '게시글 수정 - 강원도 관광' : '게시글 작성 - 강원도 관광'">게시글 작성</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub5.css}">
+    <style>
+        .notice-form { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .form-title { font-size: 24px; font-weight: 700; margin-bottom: 30px; padding-bottom: 14px; border-bottom: 2px solid #333; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 8px; }
+        .form-input { width: 100%; padding: 14px 16px; border: 1px solid #ddd; border-radius: 4px; font-size: 15px; font-family: inherit; }
+        .form-textarea { width: 100%; padding: 14px 16px; border: 1px solid #ddd; border-radius: 4px; font-size: 15px; min-height: 400px; resize: vertical; font-family: inherit; line-height: 1.7; }
+        .form-input:focus, .form-textarea:focus { outline: none; border-color: #333; }
+        .form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .btn-submit { padding: 12px 32px; background: #333; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: 600; }
+        .btn-cancel { display: inline-block; padding: 12px 32px; background: #aaa; color: #fff; border-radius: 4px; text-decoration: none; font-size: 15px; font-weight: 600; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main>
+        <div class="notice-header">
+            <div class="notice-header-content">
+                <div class="notice-header-text">
+                    <h2>강원관광 알림소식</h2>
+                    <h1 th:text="${mode == 'edit'} ? '게시글 수정' : '게시글 작성'">게시글 작성</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="notice-form">
+            <div class="form-title" th:text="${mode == 'edit'} ? '게시글 수정' : '새 게시글 작성'">새 게시글 작성</div>
+
+            <!-- 작성 폼 -->
+            <form th:if="${mode != 'edit'}" th:action="@{/notice/new}" method="post">
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="text" name="title" class="form-input" placeholder="제목을 입력하세요." required/>
+                </div>
+                <div class="form-group">
+                    <label>내용</label>
+                    <textarea name="content" class="form-textarea" placeholder="내용을 입력하세요." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <a th:href="@{/notice/list}" class="btn-cancel">취소</a>
+                    <button type="submit" class="btn-submit">등록</button>
+                </div>
+            </form>
+
+            <!-- 수정 폼 -->
+            <form th:if="${mode == 'edit'}" th:action="@{/notice/edit/{id}(id=${notice.id})}" method="post">
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="text" name="title" class="form-input" th:value="${notice.title}" required/>
+                </div>
+                <div class="form-group">
+                    <label>내용</label>
+                    <textarea name="content" class="form-textarea" th:text="${notice.content}" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <a th:href="@{/notice/detail/{id}(id=${notice.id})}" class="btn-cancel">취소</a>
+                    <button type="submit" class="btn-submit">수정 완료</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

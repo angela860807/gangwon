@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 이색적인 포토스팟</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <style>
+    .drive-image-gallery1 {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            }
+    .drive-image-gallery1 img {
+            width: 50%;
+            height: auto;
+            display: block;
+            }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main id="sub">
+        <div class="drive-info-section">
+            <div class="drive-highlight-box">
+                <h3>여기가 어디? 이색적인 포토스팟이 가득한 여행지 소개</h3>
+                <br>
+                <p>단순히 눈으로 담는 것에 그치지 않는다.
+                    <br>
+                    이색적인 피노키오가 가득한 곳에서 '엽기소나무'와 방사형 원형블록이 인상적인 곳까지.
+                    <br>
+                    감성을 자극하는 트렌디한 스팟을 고루 갖춘 워너비 여행지를 소개한다.
+                    <br>
+                </p>
+            </div>
+
+            <p class="drive-section-label">&lt;참고 강원네이처로드 매거진&gt;</p>
+            <h3 class="drive-route-title">이색적인 포토스팟 명소 여행 매거진 - 강원네이처로드</h3>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_7.jpg}" alt="삼척 도계나무나라">
+                <img th:src="@{/images/sub11/sub11_7_1.jpg}" alt="삼척 도계나무나라">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">1. 삼척 도계나무나라 (꿈과 상상의 오감 체험 공간)</p>
+                <p class="drive-place-address">강원도 삼척시 도계읍 강원남부로 893-46</p>
+                <p class="drive-place-desc">삼척 도계나무나라는 친환경 웰빙 자재인 목재를 활용한 오감 및 만들기 체험, 피노키오 전시, 어린이 나무놀이터 등이 구비된 목재문화 체험 공간이다.
+                    <br>
+                    나무이용전시실에는 나무에 대한 각종 설명들이 자세하게 전시되어 있어 한 눈에 보기 좋고, 이해하기 쉽다.
+                    <br>
+                    아울러 옛날 나무로 만든 너와집과 각종 건축물들도 전시되어 있다.
+                    <br>
+                    2층 피노키오 전시실에서는 피노키오의 일생부터 피노키오작품까지 전시되어 있는데, 각각 다른 모습으로 매력을 뽐내고 있는 피노키오 모형을 관람할 수 있다.
+                    <br>
+                    유리공예품 전시 및 체험을 즐길 수 있는 도계유리나라도 인근에 위치해 있어 함께 둘러보면 좋다.
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_8.jpg}" alt="영월 와이스퀘어">
+                <img th:src="@{/images/sub11/sub11_8_1.jpg}" alt="영월 와이스퀘어">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">2. 영월 와이스퀘어 (입소문 가득한 영월의 핫플레이스)</p>
+                <p class="drive-place-address">강원도 영월군 영월읍 청령포로 126-3 영월관광센터</p>
+                <p class="drive-place-desc">와이스퀘어는 영월을 포함한 폐광지역의 통합관광을 위한 거점지원센터로 다양한 관광상품 정보를 제공하고 관광트렌드 변화에 능동적으로 대처하기 위해 2021년 10월 조성됐다.
+                    <br>
+                    조선 6대 임금 단종이 머물렀던 청령포의 서강을 토대로 붉은 건물이 인상적이다.
+                    <br>
+                    1층에는 이벤트홀, 푸드코트존, 2층에는 다양한 체험관 및 전시관, 3층에는 전망이 우수한 옥상정원과 카페가 조성되어 있어 영월의 방문하는 여행객들에게 편안한 쉼터를 제공한다.
+                    <br>
+                    아울러 전시장 외부에는 소나무숲 정원과 별빛 터널이 조성되어 있어 이색적인 볼거리를 제공한다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_9.png}" alt="정선 타임캡슐공원">
+                <img th:src="@{/images/sub11/sub11_9_1.jpg}" alt="정선 타임캡슐공원">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">3. 정선 타임캡슐공원 (시간을 간직한 나무 아래 추억을 보관하세요)</p>
+                <p class="drive-place-address">강원 정선군 신동읍 조동리 산70-26</p>
+                <p class="drive-place-desc">영화 '엽기적인 그녀'에서 차태현과 전지현이 3년 후 다시 만날 약속을 기약하면서 타임캡슐을 소나무 밑에 묻었던 정선군 신동읍 조동리 '일명 새비재'에 조성된 관광명소이다.
+                    <br>
+                    해발 850m 지점에 홀로 있는 소나무 '엽기소나무'를 중심으로 12개월을 의미하는 12개 방사형 원형블록(1블럭당 400여개 캡슐설치)이 설치되었다.
+                    <br>
+                    희망하는 블럭(月)에 타임캡슐을 저장하는 공간이 있고, 편익을 위한 주차장, 화장실 및 야생화단지 등 조경시설 등이 설치되어 있다.
+                    <br>
+                    타임캡슐은 관리사무소에서 유료 임대가 이뤄지는데, 타임캡슐은 100일, 1년, 2년, 3년 후에 꺼내볼 수 있다. 추억을 저장하러 떠나보자.
+                </p>
+            </div>
+        </div>
+
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

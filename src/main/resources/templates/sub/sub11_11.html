@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 방탄소년단 여행지</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <style>
+    .drive-image-gallery1 {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            }
+    .drive-image-gallery1 img {
+            width: 50%;
+            height: auto;
+            display: block;
+            }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main id="sub">
+        <div class="drive-info-section">
+            <div class="drive-highlight-box">
+                <h3>방탄투어 떠나보자! 강원도 방탄소년단 여행지</h3>
+                <br>
+                <p>방탄소년단(BTS)이 다녀간 곳곳은 대표 관광명소로 자리 잡았고,
+                    <br>
+                    많은 이들의 여행의 이유가 되어 '방탄투어'는 새로운 여행 트렌드가 되었다.
+                    <br>강원도 구석구석 방탄소년단(BTS)의 촬영지를 한 발자국씩 따라가 보면 방탄 성지순례는 어느덧 완성된다.
+                    <br>방탄투어를 통해 강원도의 핫플이 된 곳을 소개한다.
+                </p>
+            </div>
+
+            <p class="drive-section-label">&lt;참고 강원네이처로드 매거진&gt;</p>
+            <h3 class="drive-route-title">방탄(BTS)투어 여행지 추천 명소 여행 매거진 - 강원네이처로드</h3>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_23.png}" alt="강릉 BTS 버스정류장">
+                <img th:src="@{/images/sub11/sub11_23_1.jpg}" alt="강릉 BTS 버스정류장">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">1. 강릉 BTS 버스정류장 (버스가 오지 않은 정류장)</p>
+                <p class="drive-place-address">강원 강릉시 주문진읍 향호리 8-55</p>
+                <p class="drive-place-desc">투명한 창 너머 파란 주문진 바닷가,
+                    <br>
+                    세계적인 그룹 방탄소년단의 'YOU NEVER WALK ALONE' 재킷 사진 속 배경으로 등장하는 곳이다.
+                    <br>
+                    BTS 버스정류장은 실제 버스정류장은 아니고 촬영 당시에 임시로 만든 후 철거했는데 관광객을 위하여 포토존을 다시 설치했다.
+                    <br>
+                    국내외 팬들이 즐겨 찾는 주문진 해변의 이색 볼거리로 자리매김하였다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_23_2.png}" alt="삼척 맹방해변">
+                <img th:src="@{/images/sub11/sub11_23_3.png}" alt="삼척 맹방해변">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">2. 삼척 맹방해변 (화려한 선베드 위에서 사진 한 컷)</p>
+                <p class="drive-place-address">강원 삼척시 근덕면 맹방해변로</p>
+                <p class="drive-place-desc">맹방해변은 은빛 모래밭이 십리에 펼쳐져 있다고 해서 명사십리 해수욕장으로 불리며,
+                    <br>
+                    삼척시 제1의 해수욕장이기도 하다. 이 곳에 방탄소년단(BTS) 'BUTTER' 앨범 재킷의 모습처럼 비치발리볼 세트로 포토존을 만들어 방탄 성지순례의 핫플레이스가 되었다.
+                    <br>
+                    이 뿐만 아니라 영화 '봄날은 간다'에서 상우와 은수가 해수욕장에서 파도소리를 녹음하는 장면이 촬영된 곳으로 알려지면서 유명세를 치르기도 했다.
+                    <br>
+                    송림이 길에 늘어서 있어 삼림욕을 즐기며, 산책을 하기에 좋다. 아울러 물이 깊지 않아 가족, 연인, 친구들과 해수욕을 즐기기에도 손색이 없는 곳이다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_23_5.jpg}" alt="정선 아리힐스">
+                <img th:src="@{/images/sub11/sub11_23_4.jpg}" alt="정선 아리힐스">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">3. 정선 아리힐스 (절벽 끝에서 대자연을 온 몸으로 느낄 수 있는 곳)</p>
+                <p class="drive-place-address">강원 정선군 정선읍 병방치길 235</p>
+                <p class="drive-place-desc">'2021 BTS 윈터패키지' 영상 속 멤버들이 짚와이어를 타고 내려오는 곳은 바로 정선 아리힐스다.
+                    <br>
+                    스카이워크, 짚와이어 및 짚코스터 등 짜릿한 즐길거리가 가득한 곳이다.
+                    <br>
+                    특히 병방치스카이워크는 한반도 지형을 닮은 동강변의 모습을 내려다 볼 수 있는 곳으로, 해발 583m의 U자형 투명한 유리바닥을 내려다보면 구름 위를 걷는 듯한 느낌을 준다.
+                    <br>
+                    그리고 짚와이어는 출발점인 병방산 정상부터 도착점까지 표고차가 높이 325.5m에 달한다.
+                    <br>
+                    탑승장에 올라서면 병방산 절벽부터 도착점인 동강 생태체험 학습장까지 길게 늘어선 와이어 줄이 아찔하다.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 테마여행</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+</head>
+<body>
+<div class="wrap">
+    <!-- 서브 비주얼 영역 (비디오) -->
+    <section class="sub_visual">
+        <video autoplay loop playsinline muted>
+            <source type="video/mp4" th:src="@{/movies/theme.mp4}" />
+        </video>
+        <h3>테마여행</h3>
+    </section>
+
+    <!-- 브레드크럼 -->
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">테마여행</a>
+    </div>
+
+    <!-- 헤더 -->
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <!-- 메인 콘텐츠 -->
+    <main id="sub">
+        <div class="theme-section">
+            <div class="theme-cards">
+                <!-- 카드 1: 나혼자여행 -->
+                <div class="theme-card theme-card-1">
+                    <div class="theme-card-header">
+                        <div class="theme-label">나혼자여행</div>
+                        <div class="theme-title">혼자서도 좋아.나혼자여행.<br>홀로족들을 위한 여행코스</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>미로예술시장</li>
+                            <li>원주반곡역</li>
+                            <li>풍수원성당</li>
+                            <li>안흥찐빵모락모락마을</li>
+                            <li>횡성호수길5구간</li>
+                            <li>젊은달와이파크</li>
+                            <li>별마로천문대</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 2: 일출 명소 -->
+                <div class="theme-card theme-card-2">
+                    <div class="theme-card-header">
+                        <div class="theme-label">일출 명소</div>
+                        <div class="theme-title">동해 어디든 그곳이 해맞이 명소,<br>일출은 언제나 한반도의<br>동쪽에서!</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>정동심곡바다부채길</li>
+                            <li>촛대바위</li>
+                            <li>청초호</li>
+                            <li>청간정</li>
+                            <li>아야진해변</li>
+                            <li>태백산국립공원</li>
+                            <li>낙산사</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 3: 별뷰 여행지 -->
+                <div class="theme-card theme-card-3">
+                    <div class="theme-card-header">
+                        <div class="theme-label">별뷰 여행지</div>
+                        <div class="theme-title">캄캄한 어둠 속, 빛나는-별<br>하나..... 그 순간을 기억해</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>안반데기</li>
+                            <li>문치재</li>
+                            <li>별미로천문대</li>
+                            <li>동강전망자연휴양림</li>
+                            <li>청옥산육백마지기</li>
+                            <li>조경철천문대</li>
+                            <li>매봉산바람의언덕</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 4: 익사이팅 체험코스 -->
+                <div class="theme-card theme-card-4">
+                    <div class="theme-card-header">
+                        <div class="theme-label">익사이팅 체험코스</div>
+                        <div class="theme-title">짜릿한 경험, 차원이 다른<br>익사이팅을 자연속에서 즐기자</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>루지체험장</li>
+                            <li>해상케이블카</li>
+                            <li>스피디움</li>
+                            <li>도깨비골스카이밸리</li>
+                            <li>소금산그랜드밸리</li>
+                            <li>발왕산스카이워크</li>
+                            <li>물레길</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 5: 힐링 명소 -->
+                <div class="theme-card theme-card-5">
+                    <div class="theme-card-header">
+                        <div class="theme-label">힐링하기 좋은 청정 자연의 명소</div>
+                        <div class="theme-title">여행 그 자체로 힐링! 휴식이 필요하다면 이곳이 바로 쉼터</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>산소길</li>
+                            <li>주상절리길</li>
+                            <li>붉은메밀밭</li>
+                            <li>백담사</li>
+                            <li>고석정꽃밭</li>
+                            <li>섬강자작나무숲</li>
+                            <li>삼척해변</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 6: 연인과 함께 -->
+                <div class="theme-card theme-card-6">
+                    <div class="theme-card-header">
+                        <div class="theme-label">연인과 함께하면 좋은 여행지</div>
+                        <div class="theme-title">함께 있는 추억 그 자체로 행복이<br>되는 연인들의 속삭임</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>자작나무숲</li>
+                            <li>서피비치</li>
+                            <li>하늬라벤더팜</li>
+                            <li>매봉산바람의언덕</li>
+                            <li>은행나무숲</li>
+                            <li>남이섬</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 7: 아이와 함께 -->
+                <div class="theme-card theme-card-7">
+                    <div class="theme-card-header">
+                        <div class="theme-label">아이와 함께 여행</div>
+                        <div class="theme-title">아이들천국.마음껏 뛰어 놀고<br>신나게 공부하자!</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>알파카월드</li>
+                            <li>은행나무숲</li>
+                            <li>통일전망대</li>
+                            <li>얼라이브하트</li>
+                            <li>365세이프타운</li>
+                            <li>낙동강발원지황지</li>
+                            <li>동화마을수목원</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 카드 8: 반려견 동반 -->
+                <div class="theme-card theme-card-8">
+                    <div class="theme-card-header">
+                        <div class="theme-label">반려견 동반 여행</div>
+                        <div class="theme-title">강원댕댕여지도를 펼쳐라!<br>반려견과 이젠 함께 다니자.</div>
+                    </div>
+                    <div class="theme-card-body">
+                        <ul class="theme-list">
+                            <li>강아지숲</li>
+                            <li>설악해맞이공원</li>
+                            <li>치악산국립공원</li>
+                            <li>강원댕댕트레인</li>
+                            <li>물레길</li>
+                            <li>한반도섬</li>
+                            <li>펫힐링달빛동물원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

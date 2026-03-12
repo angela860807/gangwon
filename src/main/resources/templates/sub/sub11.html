@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 이야기속강원</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+</head>
+<body>
+<div class="wrap">
+    <!-- 서브 비주얼 영역 -->
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+
+    <!-- 메뉴목록 -->
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <!-- 헤더 -->
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <!-- 메인 콘텐츠 -->
+    <main id="sub">
+        <div class="now-list list-type-col4 clearfix">
+            <a th:href="@{/sub/sub11_1}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail.jpg}" alt="봄 저격 드라이브 명소">
+                </div>
+                <strong>봄 저격 드라이브 명소</strong>
+            </a>
+            <a th:href="@{/sub/sub11_2}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-2.jpg}" alt="강원도 별보기 명소">
+                </div>
+                <strong>나랑 별 보러 갈래? 강원도 별보기 명소!</strong>
+            </a>
+            <a th:href="@{/sub/sub11_3}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-4.jpg}" alt="이색 포토스팟">
+                </div>
+                <strong>이색적인 포토스팟이 가득한 여행지 소개</strong>
+            </a>
+            <a th:href="@{/sub/sub11_4}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-5.jpg}" alt="야경관광지">
+                </div>
+                <strong>낮보다 더욱 빛나는 강원의 밤, 야경관광지 추천</strong>
+            </a>
+            <a th:href="@{/sub/sub11_5}">
+                <div>
+                    <img th:src="@{/images/sub11/sub11_13_1.jpg}" alt="가을 관광지">
+                </div>
+                <strong>다채로운 색으로 풍덩! 가을철 추천 여행지</strong>
+            </a>
+            <a th:href="@{/sub/sub11_6}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-12.jpg}" alt="언택트 여행지">
+                </div>
+                <strong>가족과 함께 떠나보면 좋을 언택트 여행지</strong>
+            </a>
+            <a th:href="@{/sub/sub11_7}">
+                <div>
+                    <img th:src="@{'/images/sub11/Thumbnail (1).jpg'}" alt="화천 산천어 축제">
+                </div>
+                <strong>꽁꽁 언 겨울을 녹여줄 재미! 화천 산천어축제</strong>
+            </a>
+            <a th:href="@{/sub/sub11_8}">
+                <div>
+                    <img th:src="@{'/images/sub11/Thumbnail (2).jpg'}" alt="영월 동강 축제">
+                </div>
+                <strong>동강! 여름을 품다 영월 동강 축제</strong>
+            </a>
+            <a th:href="@{/sub/sub11_9}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-13.jpg}" alt="동물 만나기">
+                </div>
+                <strong>아이와 함께, 몽글몽글 귀여운 동물을 만나봐요</strong>
+            </a>
+            <a th:href="@{/sub/sub11_10}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-11.jpg}" alt="문화예술공간">
+                </div>
+                <strong>문화예술공간에서 떠나는 감성여행</strong>
+            </a>
+            <a th:href="@{/sub/sub11_11}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-8.jpg}" alt="방탄소년단 여행지">
+                </div>
+                <strong>방탄투어 떠나보자! 강원도 방탄소년단 여행지</strong>
+            </a>
+            <a th:href="@{/sub/sub11_12}">
+                <div>
+                    <img th:src="@{/images/sub11/Thumbnail-6.jpg}" alt="관광택시">
+                </div>
+                <strong>뚜벅이 여행자를 위한 선물, 관광택시</strong>
+            </a>
+        </div>
+
+        <!-- 하단페이지바 -->
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

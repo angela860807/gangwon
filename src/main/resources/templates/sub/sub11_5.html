@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 가을철 추천 여행지</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <style>
+    .drive-image-gallery1 {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            }
+    .drive-image-gallery1 img {
+            width: 50%;
+            height: auto;
+            display: block;
+            }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main id="sub">
+        <div class="drive-info-section">
+            <div class="drive-highlight-box">
+                <h3>다채로운 색으로 풍덩! 가을철 추천 여행지</h3>
+                <br>
+                <p>무더위가 지나고 어디론가 떠나고 싶은 시간,<br>
+                    계절의 변화가 산과 바다 다채로운 색으로 물들여 가을이 왔음을 더욱 실감나게 한다.<br>
+                    강원도의 가을을 흠뻑 느낄 수 있는 여행지 추천!
+                </p>
+            </div>
+
+            <p class="drive-section-label">&lt;참고 강원네이처로드 매거진&gt;</p>
+            <h3 class="drive-route-title">가을철 추천 명소 여행 매거진 - 강원네이처로드</h3>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_13.jpg}" alt="횡성 풍수원 성당">
+                <img th:src="@{/images/sub11/sub11_13_1.jpg}" alt="횡성 풍수원 성당">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">1. 횡성 풍수원 성당 (가을이 되면 내리는 낙엽비가 가득)</p>
+                <p class="drive-place-address">강원 횡성군 서원면 경강로유현1길 30</p>
+                <p class="drive-place-desc">1907년에 지어진 풍수원성당은 우리나라에서는 네 번째이자 강원도 최초의 성당으로, 한국 신부가 지은 최초의 성당이다.
+                    <br>
+                    초가집으로 된 본당이 있던 자리에 2대 정규하 신부가 신자들과 함께 지금의 성당을 세웠다.
+                    <br>
+                    붉은 벽돌로 지은 성당의 아름다운 건축미가 돋보이며, 가을철 노란 은행잎과 어우러져 고즈넉하고 정결한 분위기에 평안을 맛볼 수 있다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_14.jpg}" alt="양양 남대천생태관찰로">
+                <img th:src="@{/images/sub11/sub11_14_1.jpg}" alt="양양 남대천생태관찰로">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">2. 양양 남대천생태관찰로 (가을 정취 가득한 억새 숲 산책)</p>
+                <p class="drive-place-address">강원 양양군 양양읍 조산리 93-1</p>
+                <p class="drive-place-desc">바다와 강이 만나는 곳에 있는 남대천은 재두루미, 흰목물떼새 등 다양한 멸종 위기 야생동물이 서식하는 장소로,
+                    <br>남대천에는 생태환경을 관찰할 수 있도록 데크 길이 잘 조성되어 있다.
+                    <br>가을이면 억새가 장관을 이뤄 데크 길을 따라 걸으면 잔잔한 강물과 바람에 출렁이는 억새의 은빛 물결에 마음을 빼앗기게 된다.
+                    <br>남대천 제방 아래 황화 코스모스도 피어 있어 꽃밭 사이로 난 길을 걸으며 인생샷도 남길 수 있다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_15.jpg}" alt="영월 붉은 메밀밭">
+                <img th:src="@{/images/sub11/sub11_15_1.jpg}" alt="영월 붉은 메밀밭">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">3. 영월 붉은 메밀밭 (붉은 메밀이 바람에 흩날리며 붉게 타오르는 듯한 신비함)</p>
+                <p class="drive-place-address">강원 영월군 영월읍 삼옥리 301-1</p>
+                <p class="drive-place-desc">익히 알고 있는 흰 메밀꽃이 아닌 붉은 메밀꽃을 볼 수 있는 곳으로,
+                    <br>
+                    10월 초 동강 변을 따라 만개한 붉은 메밀꽃을 볼 수 있어 영월의 가을 명소로 주목받고 있다.
+                    <br>
+                    2019년 영월읍 삼옥리 먹골마을 강변에 4만 ㎡ 규모의 붉은 메밀밭이 조성된 후 지역 문예인의 전시와 공연이 열리거나 이색적인 가을 풍경을 촬영하기 위해 사진작가들이 찾으면서 알음알음 알려지기 시작했고,
+                    <br>
+                    2020년에는 3만 명의 관광객이 방문할 정도로 좋은 반응을 얻고 있다.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

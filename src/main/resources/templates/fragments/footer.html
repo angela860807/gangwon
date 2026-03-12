@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="footer" id="ft">
+    <img th:src="@{/images/common/footer.jpg}" alt="푸터 이미지" class="ft_img"/>
+    <div class="container ft_wrap">
+        <div class="ft_logo">
+            <img th:src="@{/images/common/flogo1.png}" alt="푸터 로고1"/>
+        </div>
+        <div class="ft_text">
+            <nav id="fnb">
+                <a href="https://state.gwd.go.kr/portal/services/privacy" target="_blank">개인정보처리방침</a>
+                <a href="https://state.gwd.go.kr/portal/services/videoInformation" target="_blank">영상정보처리기기관리방침</a>
+                <a href="https://state.gwd.go.kr/portal/services/copyright" target="_blank">저작권보호</a>
+            </nav>
+            <div class="copyright">
+                <p class="addr">(24266) 강원특별자치도 춘천시 중앙로 1 (봉의동)</p>
+                <p class="copy">ⓒ Gangwon State   All Rights Reserved</p>
+            </div>
+        </div>
+        <div class="ft_logo">
+            <img th:src="@{/images/common/flogo2.png}" alt="푸터 로고2"/>
+        </div>
+        <div class="ft_right">
+            <nav id="relation">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="sel" id="ra14" class="logic-check"/>
+                        <label for="ra14" class="btn-open">패밀리사이트</label>
+                        <div class="sel" id="sel4">
+                            <ul class="view-list">
+                                <li><a href="https://state.gwd.go.kr/" target="_blank">강원특별자치도청</a></li>
+                                <li><a href="http://www.gwto.or.kr/" target="_blank">강원관광재단</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

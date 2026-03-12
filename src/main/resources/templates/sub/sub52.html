@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 관광불편신고</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub5.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+</head>
+<body>
+<div class="wrap">
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main>
+        <div class="notice-header">
+            <div class="notice-header-content">
+                <div class="notice-header-text">
+                    <h2>강원특별자치도 시군별 관광안내</h2>
+                    <h1>관광불편신고 및 안내소 찾기</h1>
+                </div>
+                <div class="notice-breadcrumb">
+                    <span>HOME > 알림소식 > 관광불편신고</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="city-container">
+            <a href="https://www.chuncheon.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call01_h.jpg}" alt="춘천시"></div>
+                <h3 class="city-name">춘천시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.wonju.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call02_h.jpg}" alt="원주시"></div>
+                <h3 class="city-name">원주시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.gn.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call03_h.jpg}" alt="강릉시"></div>
+                <h3 class="city-name">강릉시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.dh.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call04_h.jpg}" alt="동해시"></div>
+                <h3 class="city-name">동해시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.taebaek.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call05_h.jpg}" alt="태백시"></div>
+                <h3 class="city-name">태백시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.sokcho.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call06_h.jpg}" alt="속초시"></div>
+                <h3 class="city-name">속초시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.samcheok.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call07_h.jpg}" alt="삼척시"></div>
+                <h3 class="city-name">삼척시</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.hongcheon.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call08_h.jpg}" alt="홍천군"></div>
+                <h3 class="city-name">홍천군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.hsg.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call09_h.jpg}" alt="횡성군"></div>
+                <h3 class="city-name">횡성군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.yw.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call10_h.jpg}" alt="영월군"></div>
+                <h3 class="city-name">영월군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.jeongseon.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call12_h.jpg}" alt="정선군"></div>
+                <h3 class="city-name">정선군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.cwg.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call13_h.jpg}" alt="철원군"></div>
+                <h3 class="city-name">철원군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.yanggu.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call15_h.jpg}" alt="양구군"></div>
+                <h3 class="city-name">양구군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.inje.go.kr/portal" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call16_h.jpg}" alt="인제군"></div>
+                <h3 class="city-name">인제군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.gwgs.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call17_h.jpg}" alt="고성군"></div>
+                <h3 class="city-name">고성군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+
+            <a href="https://www.yangyang.go.kr/" class="city-card" target="_blank">
+                <div class="card-icon"><img th:src="@{/images/sub52/call18_h.jpg}" alt="양양군"></div>
+                <h3 class="city-name">양양군</h3>
+                <p class="city-label">신고센터</p>
+            </a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

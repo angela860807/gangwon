@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* ===== 스타일 5: 박스 호버 효과 ===== */
+
+/* ===== 기본 초기화 ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ul, li { list-style: none; }
+a { text-decoration: none; color: #333; }
+body, html { font-family: 'GamtanRoad Dotum', sans-serif; font-weight: 300; }
+body { overflow-x: hidden; }
+
+.wrap { width: 100%; min-width: 320px; }
+.container { width: 1300px; margin: 0 auto; }
+
+/* ===== Video Background ===== */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+/* ===== 헤더: 박스 호버 ===== */
+#hd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+#hd:hover {
+    background: linear-gradient(135deg, rgba(137, 25, 155, 0.9) 0%, rgba(160, 17, 71, 0.9) 50%, rgba(179, 9, 1, 0.9) 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#hd .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: relative;
+}
+
+.logo img { height: 60px; width: auto; }
+.ck_item { display: none; }
+
+/* ===== GNB ===== */
+.gnb { position: relative; }
+
+.gnb .menu { display: flex; gap: 32px; height: 80px; }
+.gnb .menu > li {
+    position: relative;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gnb .menu a.dp1 {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.gnb .menu > li:hover a.dp1 {
+    color: #ffe600;
+    transform: scale(1.05);
+}
+
+/* 2뎁스 서브 */
+.gnb .sub {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    min-width: 200px;
+    background: linear-gradient(135deg, #89199B 0%, #a01147 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding: 12px 0;
+}
+
+.gnb .menu > li:hover .sub {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gnb .sub li { padding-left: 0; text-align: center; }
+
+.gnb .sub li a {
+    display: block;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    transition: all 0.2s;
+}
+
+.gnb .sub li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffe600;
+}
+
+/* ===== TNB ===== */
+.tnb { display: flex; gap: 10px; align-items: center; }
+.tnb a,
+.tnb .tnb-btn {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    padding: 6px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.tnb a:hover,
+.tnb .tnb-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: #fff;
+}
+.tnb .tnb-user {
+    cursor: default;
+    color: #ffe600;
+    border-color: rgba(255, 224, 0, 0.5);
+}
+
+/* ===== Footer ===== */
+#ft{
+    position: relative;
+    height: 400px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.ft_img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    z-index: 0;
+}
+
+#ft .ft_wrap{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100%;
+}
+
+.ft_logo img{ height: 60px; width: auto; }
+
+.ft_text{ flex: 3; min-width: 510px; }
+
+#fnb{ display: flex; gap: 18px; margin-bottom: 22px; }
+#fnb a{ color: #fff; font-weight: 600; font-size: 18px; position: relative; padding-right: 18px; display: inline-flex; align-items: center; }
+#fnb a:first-child{ color: #ffe600; }
+#fnb a:not(:last-child)::after{ content: "|"; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.45); font-size: 18px; }
+
+#ft .copyright{ margin-top: 8px; }
+#ft .addr{ font-size: 16px; opacity: 0.9; margin-bottom: 8px; }
+#ft .copy{ font-size: 16px; opacity: 0.9; }
+
+.ft_right{ width: 270px; margin-top: 2px; }
+#relation{ width: 100%; position: relative; }
+#relation ul{ list-style: none; margin: 0; padding: 0; }
+#relation ul li{ position: relative; }
+#relation .logic-check{ display: none; }
+
+#relation .btn-open{
+    display: flex; align-items: center; justify-content: space-between;
+    height: 52px; padding: 0 18px;
+    border: 2px solid rgba(255,255,255,0.6); color: #fff;
+    background: rgba(0,0,0,0.15); cursor: pointer; font-size: 20px;
+    user-select: none; caret-color: transparent;
+}
+#relation .btn-open::after{
+    content: ""; width: 10px; height: 10px;
+    border-right: 2px solid #fff; border-bottom: 2px solid #fff;
+    transform: rotate(-135deg);
+    transition: all 0.3s;
+}
+
+#relation .sel{
+    position: absolute; right: 0; bottom: 52px; width: 100%;
+    background: #fff; border: none;
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease; z-index: 30;
+}
+#ra14:checked ~ .sel{ max-height: 220px; }
+
+#relation .view-list li a{
+    display: block; padding: 14px 18px; font-size: 16px;
+    color: #222; border-top: 1px solid #eee;
+}
+#relation .view-list li a:hover{ background: #f3f7ff; color: #05AFF2; }

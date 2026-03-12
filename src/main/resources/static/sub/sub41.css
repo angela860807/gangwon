@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+/* ===== 서브 비주얼 ===== */
+.sub_visual {
+    position: relative;
+    width: 100%;
+}
+
+.visual_img {
+    width: 100%;
+    display: block;
+}
+
+/* ===== Sub Visual Title ===== */
+.sub_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Breadcrumb ===== */
+.tab-bx {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-bx .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bread-crumb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.bread-crumb a {
+    color: #666;
+    transition: color 0.2s;
+}
+
+.bread-crumb a:hover {
+    color: #333;
+}
+
+.bread-crumb a::after {
+    content: '>';
+    margin-left: 8px;
+    color: #aaa;
+}
+
+.bread-crumb a:last-child::after {
+    content: '';
+    margin-left: 0;
+}
+
+.bread-crumb a:last-child {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ===== Content Area ===== */
+.content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 80px;
+}
+
+/* ===== Region Filter ===== */
+.check-bx {
+    margin-bottom: 30px;
+    padding: 24px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.check-bx h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+.check-bx fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.check-bx fieldset div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.check-bx fieldset label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.check-bx fieldset input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.check-bx .skinBtnBo {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 24px;
+    background: #2b6cb0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.check-bx .skinBtnBo:hover {
+    background: #1e5a94;
+}
+
+/* ===== Search Area ===== */
+.search-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-area select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+}
+
+.search-area input[type="text"] {
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.search-area input[type="submit"] {
+    padding: 8px 20px;
+    background: #2b6cb0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-area input[type="submit"]:hover {
+    background: #1e5a94;
+}
+
+/* ===== Attraction List ===== */
+.attraction-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.attraction-card {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+}
+
+.attraction-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.attraction-card .thumb {
+    position: relative;
+    width: 100%;
+    padding-top: 66.66%;
+    overflow: hidden;
+}
+
+.attraction-card .thumb img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.attraction-card:hover .thumb img {
+    transform: scale(1.05);
+}
+
+.attraction-card .thumb .spot {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #2b6cb0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-style: normal;
+    z-index: 2;
+}
+
+.attraction-card .text {
+    padding: 18px;
+}
+
+.attraction-card .text em {
+    display: block;
+    font-size: 13px;
+    font-style: normal;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.attraction-card .text strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== Pager ===== */
+.pager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 50px 0 80px;
+}
+
+.pager a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.pager a:hover {
+    border-color: #2b6cb0;
+    color: #2b6cb0;
+}
+
+.pager a.active {
+    background: #2b6cb0;
+    border-color: #2b6cb0;
+    color: #fff;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.pager .nav-btn {
+    font-size: 12px;
+}
+
+/* ===== Download ===== */
+.form-down {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.form-down img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.form-down:hover img {
+    transform: scale(1.01);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .attraction-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .attraction-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .content-area {
+        padding: 40px 16px 60px;
+    }
+
+    .search-area {
+        justify-content: flex-start;
+    }
+
+    .search-area input[type="text"] {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .attraction-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .check-bx fieldset {
+        gap: 6px 12px;
+    }
+}

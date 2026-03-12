@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gangwon
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/gangwon
+    username: postgres
+    password: 1004
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8301
+

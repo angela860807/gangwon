@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 음식</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub31.css}">
+</head>
+<body>
+<div class="wrap">
+    <section class="video-background">
+        <video muted loop autoplay>
+            <source type="video/mp4" th:src="@{/movies/food.mp4}" />
+        </video>
+        <div class="video-overlay">
+            <h1>음식</h1>
+        </div>
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+    </section>
+
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a th:href="@{/sub/sub31}">먹거리</a>
+        <a th:href="@{/sub/sub31}">음식</a>
+    </div>
+
+    <section class="food-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food1.jpg}" alt="갈비" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="맵기" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>갈비</h3>
+                            <div class="region-tags"><span>횡성</span><span>평창</span><span>태백</span><span>영월</span><span>동해</span><span>양양</span></div>
+                        </div>
+                        <div class="hashtags">#최고급 #최우 #강원도한우 #생갈비 #양념갈비</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food2.jpg}" alt="산채요리" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>산채요리</h3>
+                            <div class="region-tags"><span>양양</span><span>속초</span><span>정선</span><span>인제</span><span>삼척</span></div>
+                        </div>
+                        <div class="hashtags">#강원도나물 #신선한 #건강식 #나물정식 #아이도좋아하는</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food3.jpg}" alt="버섯전골" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>버섯전골</h3>
+                            <div class="region-tags"><span>양양</span></div>
+                        </div>
+                        <div class="hashtags">#각종버섯 #채소듬뿍 #고기나바지락도 #송이버섯 #만두와떡</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food4.jpg}" alt="도치두루치기" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy02.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>도치두루치기</h3>
+                            <div class="region-tags"><span>고성</span><span>속초</span></div>
+                        </div>
+                        <div class="hashtags">#도치 #두루치기 #매콤하고 #얼큰한 #알도맛있는</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food5.jpg}" alt="명태맑은탕" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>명태맑은탕</h3>
+                            <div class="region-tags"><span>고성</span><span>속초</span><span>강릉</span><span>동해</span><span>삼척</span><span>양양</span></div>
+                        </div>
+                        <div class="hashtags">#명태 #지리 #시원하고 #칼칼한 #안주와해장</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food6.jpg}" alt="두부전골" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy02.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>두부전골</h3>
+                            <div class="region-tags"><span>강릉</span><span>인제</span></div>
+                        </div>
+                        <div class="hashtags">#얼큰한 #건강식 #초당두부 #두부전골 #각종채소</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food7.jpg}" alt="생삼겹살" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>생삽겹살</h3>
+                            <div class="region-tags"><span>춘천</span><span>원주</span><span>강릉</span><span>동해</span><span>태백</span><span>속초</span><span>삼척</span><span>홍천</span><span>횡성</span><span>영월</span><span>평창</span><span>정선</span><span>철원</span><span>화천</span><span>양구</span><span>인제</span><span>고성</span><span>양양</span></div>
+                        </div>
+                        <div class="hashtags">#삼겹살 #한국인소울푸드 #돼지고기 #대중적인음식</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food8.jpg}" alt="시래기된장국" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>시래기된장국</h3>
+                            <div class="region-tags"><span>양구</span></div>
+                        </div>
+                        <div class="hashtags">#시래기 #무청 #암예방 #간해독 #구수한맛 #시래기밥</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food9.jpg}" alt="모듬보쌈" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>모듬보쌈</h3>
+                            <div class="region-tags"><span>화천</span></div>
+                        </div>
+                        <div class="hashtags">#돼지고기 #절임배추 #보쌈김치 #담백한맛 #건강한 #수육</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food10.jpg}" alt="다슬기해장국" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy02.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>다슬기해장국</h3>
+                            <div class="region-tags"><span>화천</span><span>춘천</span><span>홍천</span></div>
+                        </div>
+                        <div class="hashtags">#다슬기 #달팽이 #해장국 #된장국맛 #시원한맛</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food11.jpg}" alt="분식" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>분식</h3>
+                            <div class="region-tags"><span>분식</span></div>
+                        </div>
+                        <div class="hashtags">#떡볶이 #순대 #김밥 #튀김 #어묵 #1일1분식</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food12.jpg}" alt="짬뽕" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy02.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>짬뽕</h3>
+                            <div class="region-tags"><span>철원</span><span>강릉</span><span>화천</span><span>춘천</span><span>원주</span></div>
+                        </div>
+                        <div class="hashtags">#얼큰한 #매운맛 #중식대명사 #전통있는</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food13.jpg}" alt="냉면" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>냉면</h3>
+                            <div class="region-tags"><span>철원</span><span>강릉</span><span>속초</span></div>
+                        </div>
+                        <div class="hashtags">#메밀 #비빔냉면 #물냉면 #함흥냉면 #평양냉면 #강원도냉면</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food14.jpg}" alt="곤드레밥" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>곤드레밥</h3>
+                            <div class="region-tags"><span>정선</span><span>인제</span></div>
+                        </div>
+                        <div class="hashtags">#곤드레 #나물 #나물밥 #건강한맛 #양념에비벼먹는</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food15.jpg}" alt="콧등치기국수" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>콧등치기국수</h3>
+                            <div class="region-tags"><span>정선</span></div>
+                        </div>
+                        <div class="hashtags">#멸치국물 #채소듬뿍 #메밀 #콧등치는 #정선별미</div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="card-image">
+                        <img th:src="@{/images/sub31/food16.jpg}" alt="돈까스" />
+                        <div class="spicyicon"><img th:src="@{/images/sub31/spicy00.png}" alt="" /></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>돈까스</h3>
+                            <div class="region-tags"><span>정선</span><span>춘천</span><span>원주</span><span>강릉</span><span>속초</span></div>
+                        </div>
+                        <div class="hashtags">#돈까스 #한국식 #강원도만의 #더맛있는 #특별한날</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

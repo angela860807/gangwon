@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header" id="hd">
+    <div class="container">
+        <a th:href="@{/}" class="logo">
+            <img th:src="@{/images/common/logo2.png}" alt="강원도관광로고"/>
+        </a>
+        <input type="checkbox" id="ck1" class="ck_item"/>
+        <div id="smart">
+            <label class="smart_wrap" for="ck1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <nav class="gnb">
+            <ul class="menu">
+                <li>
+                    <a th:href="@{/sub/sub11}" class="dp1">알아가기</a>
+                    <ul class="sub">
+                        <li><a th:href="@{/sub/sub11}">이야기속강원</a></li>
+                        <li><a th:href="@{/sub/sub12}">테마여행</a></li>
+                        <li><a th:href="@{/sub/sub13}">관광안내소</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/sub/sub21}" class="dp1">즐길거리</a>
+                    <ul class="sub">
+                        <li><a th:href="@{/sub/sub21}">축제·행사</a></li>
+                        <li><a th:href="@{/sub/sub22}">레저·체험</a></li>
+                        <li><a th:href="@{/sub/sub23}">K-한류</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/sub/sub31}" class="dp1">먹거리</a>
+                    <ul class="sub">
+                        <li><a th:href="@{/sub/sub31}">음식</a></li>
+                        <li><a href="https://gwdmall.kr/" target="_blank">쇼핑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/sub/sub41}" class="dp1">볼거리</a>
+                    <ul class="sub">
+                        <li><a th:href="@{/sub/sub41}">자연</a></li>
+                        <li><a th:href="@{/sub/sub42}">문화·역사</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/notice/list}" class="dp1">알림소식</a>
+                    <ul class="sub">
+                        <li><a th:href="@{/notice/list}">알림소식</a></li>
+                        <li><a th:href="@{/sub/sub52}">관광불편신고</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="tnb">
+            <!-- 로그인 상태 -->
+            <th:block th:if="${session.loginMember != null}">
+                <span class="tnb-btn tnb-user" th:text="${session.loginMember.name}">이름</span>
+                <a th:href="@{/member/logout}" class="tnb-btn">로그아웃</a>
+            </th:block>
+            <!-- 비로그인 상태 -->
+            <th:block th:if="${session.loginMember == null}">
+                <a th:href="@{/member/login}" class="tnb-btn">로그인</a>
+                <a th:href="@{/member/terms}" class="tnb-btn">회원가입</a>
+            </th:block>
+        </nav>
+    </div>
+</header>
+</body>
+</html>

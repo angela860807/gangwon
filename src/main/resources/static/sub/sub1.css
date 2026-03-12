@@ -1,0 +1,840 @@
+@charset "utf-8";
+
+/* ===== 기본 초기화 ===== */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+ul, li { 
+    list-style: none; 
+}
+
+a { 
+    text-decoration: none; 
+    color: #333; 
+}
+
+body, html { 
+    font-family: 'GamtanRoad Dotum', sans-serif;
+    font-weight: 300; 
+}
+
+body { 
+    overflow-x: hidden; 
+}
+
+.wrap { 
+    width: 100%; 
+    min-width: 320px; 
+}
+
+.container { 
+ /*   width: 1200px; */
+    margin: 0 auto; 
+}
+
+/* ===== 헤더 ===== */
+#hd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+/* 헤더 호버 효과 */
+#hd:hover {
+    background: linear-gradient(135deg, rgba(137, 25, 155, 0.9) 0%, rgba(160, 17, 71, 0.9) 50%, rgba(179, 9, 1, 0.9) 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#hd .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: relative;
+}
+
+.logo img { 
+    height: 60px; 
+    width: auto; 
+}
+
+.ck_item { 
+    display: none; 
+}
+
+/* ===== GNB (메인 네비게이션) ===== */
+.gnb { 
+    position: relative; 
+}
+
+.gnb .menu { 
+    display: flex; 
+    gap: 32px; 
+    height: 80px; 
+}
+
+.gnb .menu > li {
+    position: relative;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1depth 메뉴 */
+.gnb .menu a.dp1 {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.gnb .menu > li:hover a.dp1 {
+    color: #ffe600;
+    transform: scale(1.05);
+}
+
+/* 2depth 서브 메뉴 */
+.gnb .sub {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    min-width: 200px;
+    background: linear-gradient(135deg, #89199B 0%, #a01147 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding: 12px 0;
+}
+
+.gnb .menu > li:hover .sub {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gnb .sub li { 
+    padding-left: 0; 
+    text-align: center; 
+}
+
+.gnb .sub li a {
+    display: block;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    transition: all 0.2s;
+}
+
+.gnb .sub li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffe600;
+}
+
+/* ===== TNB (상단 네비게이션 - 로그인/회원가입) ===== */
+.tnb { display: flex; gap: 10px; align-items: center; }
+.tnb a,
+.tnb .tnb-btn {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    padding: 6px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.tnb a:hover,
+.tnb .tnb-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: #fff;
+}
+.tnb .tnb-user {
+    cursor: default;
+    color: #ffe600;
+    border-color: rgba(255, 224, 0, 0.5);
+}
+
+/* ===== Footer ===== */
+#ft {
+    position: relative;
+    background: #222 url("../images/common/footer.jpg") no-repeat center center / cover;
+    padding: 60px 0;
+    color: #fff;
+    clear: both;
+}
+
+/* 배경 이미지 숨김 */
+.ft_img {
+    display: none;
+}
+
+#ft .ft_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.ft_text {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* 푸터 네비게이션 */
+#fnb {
+    margin-bottom: 15px;
+}
+
+#fnb a {
+    color: #fff;
+    font-size: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+#fnb a:first-child {
+    color: #ffe600;
+    font-weight: bold;
+}
+
+.copyright p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* 패밀리사이트 */
+.ft_right {
+    min-width: 200px;
+}
+
+#relation {
+    width: 100%;
+    position: relative;
+}
+
+#relation ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#relation ul li { 
+    position: relative; 
+}
+
+#relation .logic-check {
+    display: none;
+}
+
+/* 패밀리사이트 버튼 */
+#relation .btn-open {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+}
+
+/* 화살표 */
+#relation .btn-open::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-135deg);
+    margin-left: 12px;
+}
+
+/* 드롭다운 */
+#relation .sel {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+    z-index: 1000;
+}
+
+#ra14:checked ~ .sel {
+    max-height: 220px;
+}
+
+#relation .view-list li a {
+    display: block;
+    padding: 14px 18px;
+    font-size: 16px;
+    color: #222;
+    border-top: 1px solid #eee;
+}
+
+#relation .view-list li a:hover {
+    background: #f3f7ff;
+    color: #05AFF2;
+}
+
+/* ===== 서브 페이지 콘텐츠 ===== */
+#sub {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.drive-info-section {
+max-width: 1200px;
+margin: 40px auto;
+background: #fff;
+padding: 40px 80px;
+}
+
+.drive-highlight-box {
+background-color: #f8f8f8;
+border: 1px solid #e0e0e0;
+padding: 20px 30px;
+margin-bottom: 30px;
+font-size: 18px;
+color: #666;
+text-align: right;
+}
+
+.drive-highlight-box strong {
+color: #333;
+}
+
+.drive-section-label {
+font-size: 14px;
+color: #666;
+margin-bottom: 10px;
+margin-top: 30px;
+}
+
+.drive-route-title {
+font-size: 16px;
+font-weight: bold;
+color: #000;
+margin-bottom: 30px;
+}
+
+/* 박스 리스트 (이야기속강원) */
+.now-list {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+}
+
+.now-list a {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.now-list a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 이미지 */
+.now-list a div {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.now-list a div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.now-list a:hover div img {
+    transform: scale(1.1);
+}
+
+/* 제목 */
+.now-list a strong {
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+    min-height: 80px;
+}
+
+/* ===== 페이지네이션 ===== */
+.pager {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pager-link,
+.pager-num {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pager-link:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.pager-link.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.pager-num {
+    background-color: #f8f9fa;
+    border: none;
+    font-weight: 600;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===== 서브 비주얼 ===== */
+.sub_visual {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sub_visual h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.sub_visual img,
+.sub_visual video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== 브레드크럼 ===== */
+.bread-crumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    text-align: right;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bread-crumb a {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 8px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.bread-crumb a:hover {
+    background-image: linear-gradient(to right, #89199B 0%, #a01147 70%, #b30901 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.bread-crumb a:not(:last-child)::after {
+    content: '>';
+    position: absolute;
+    right: -5px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* ===== 테마 카드 섹션 (sub12) ===== */
+.theme-section {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.theme-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.theme-card {
+    background: #f5f5f5;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.theme-card:hover {
+    transform: translateY(0px);
+}
+
+/* 카드 상단 이미지 영역 */
+.theme-card-header {
+    position: relative;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: #fff;
+}
+
+/* 배경 오버레이 */
+.theme-card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.theme-card-header * {
+    position: relative;
+    z-index: 2;
+}
+
+.theme-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.theme-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* 카드 하단 리스트 영역 */
+.theme-card-body {
+    background: #fff;
+    padding: 30px 25px;
+}
+
+.theme-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.theme-list li {
+    padding: 12px 0;
+    font-size: 14px;
+    color: #555;
+    position: relative;
+    padding-left: 15px;
+}
+
+.theme-list li::before {
+    content: '○';
+    position: absolute;
+    left: 0;
+    color: #999;
+}
+
+.theme-list li:hover {
+    color: #000;
+    font-weight: 500;
+}
+
+/* 각 테마 카드별 배경 이미지 */
+.theme-card-1 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_7.jpg');
+}
+
+.theme-card-2 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224.jpg');
+}
+
+.theme-card-3 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_1.jpg');
+}
+
+.theme-card-4 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_2.jpg');
+}
+
+.theme-card-5 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_3.jpg');
+}
+
+.theme-card-6 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_4.jpg');
+}
+
+.theme-card-7 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_5.jpg');
+}
+
+.theme-card-8 .theme-card-header {
+    background-image: url('../images/sub11/bdMetaFile_20221224_6.jpg');
+}
+
+/* ===== 관광안내소 (sub13) ===== */
+.header {
+    padding: 150px 20px;
+    color: white;
+    background-image: url(../images/sub11/info_visual06.jpg);
+}
+
+.header .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-text h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.header-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* 카드 컨테이너 */
+.card-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 개별 카드 */
+.card {
+    background: white;
+    width: calc(25% - 15px);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    background: linear-gradient(90deg, rgb(155, 93, 229) 0%, rgb(241, 91, 181) 50%, rgb(238, 108, 77) 100%);
+    color: white;
+}
+
+.card:hover .city,
+.card:hover .title,
+.card:hover .info-item {
+    color: white;
+}
+
+.card:hover .location-icon {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 카드 헤더 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.city {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.location-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}
+
+/* 카드 바디 */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+/* ===== 반응형 디자인 ===== */
+
+/* 테마 카드 */
+@media (max-width: 1200px) {
+    .theme-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card {
+        width: calc(33.333% - 14px);
+    }
+}
+
+/* 이야기속강원 */
+@media (max-width: 1024px) {
+    .now-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .theme-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .now-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .now-list a div {
+        height: 180px;
+    }
+    
+    .now-list a strong {
+        font-size: 15px;
+        padding: 15px;
+        min-height: 70px;
+    }
+    
+    .header-text h1 {
+        font-size: 24px;
+    }
+    
+    .card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .now-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .now-list a div {
+        height: 220px;
+    }
+    
+    .now-list a strong {
+        font-size: 16px;
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .pager-link,
+    .pager-num {
+        padding: 8px 12px;
+        font-size: 13px;
+        margin: 0 3px;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}

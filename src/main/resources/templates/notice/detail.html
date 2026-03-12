@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${notice.title} + ' - 강원도 관광'">알림소식 상세</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub5.css}">
+    <style>
+        .notice-detail { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .detail-header { border-top: 2px solid #333; border-bottom: 1px solid #ddd; padding: 24px 20px; }
+        .detail-title { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 12px; }
+        .detail-meta { display: flex; gap: 20px; font-size: 14px; color: #999; }
+        .detail-content { padding: 40px 20px; min-height: 300px; line-height: 1.9; font-size: 16px; color: #444; border-bottom: 1px solid #eee; white-space: pre-wrap; }
+        .detail-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+        .btn-back { display: inline-block; padding: 10px 24px; background: #666; color: #fff; border-radius: 4px; text-decoration: none; font-size: 14px; }
+        .btn-group { display: flex; gap: 10px; }
+        .btn-edit { display: inline-block; padding: 10px 24px; background: #333; color: #fff; border-radius: 4px; text-decoration: none; font-size: 14px; }
+        .btn-delete { display: inline-block; padding: 10px 24px; background: #c0392b; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main>
+        <div class="notice-header">
+            <div class="notice-header-content">
+                <div class="notice-header-text">
+                    <h2>강원관광 알림소식</h2>
+                    <h1>게시글 상세보기</h1>
+                </div>
+                <div class="notice-breadcrumb">
+                    <span>HOME > 알림소식 > 알림소식</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notice-detail">
+            <div class="detail-header">
+                <div class="detail-title" th:text="${notice.title}"></div>
+                <div class="detail-meta">
+                    <span>작성자: <strong th:text="${notice.writer}"></strong></span>
+                    <span>작성일: <span th:text="${#temporals.format(notice.createdAt, 'yyyy-MM-dd HH:mm')}"></span></span>
+                    <span>조회수: <span th:text="${notice.viewCount}"></span></span>
+                </div>
+            </div>
+            <div class="detail-content" th:text="${notice.content}"></div>
+            <div class="detail-actions">
+                <a th:href="@{/notice/list}" class="btn-back">목록</a>
+                <!-- 작성자 본인만 수정/삭제 가능 -->
+                <div class="btn-group"
+                     th:if="${session.loginMember != null && session.loginMember.name == notice.writer}">
+                    <a th:href="@{/notice/edit/{id}(id=${notice.id})}" class="btn-edit">수정</a>
+                    <a th:href="@{/notice/delete/{id}(id=${notice.id})}" class="btn-delete"
+                       onclick="return confirm('삭제하시겠습니까?');">삭제</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

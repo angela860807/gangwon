@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 봄 저격 드라이브 명소</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+</head>
+<body>
+<div class="wrap">
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main id="sub">
+        <div class="drive-info-section">
+            <div class="drive-highlight-box">
+                <h3>봄 저격 드라이브 명소</h3>
+                <br>
+                <p>아직 마음의 준비가 안 되었는데, 벚꽃은 내 마음도 모르고 피기 시작한다.
+                    <br>
+                    더 늦기 전에 얼른 강원도 벚꽃 구경 명소를 소개한다.
+                    <br>
+                </p>
+            </div>
+
+            <p class="drive-section-label">&lt;참고 강원네이처로드 매거진&gt;</p>
+            <h3 class="drive-route-title">봄 저격 드라이브 명소 여행 매거진 - 강원네이처로드</h3>
+
+            <div class="drive-image-gallery">
+                <img th:src="@{/images/sub11/sub11_1.jpg}" alt="공지천 유원지 벚꽃">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">1. 공지천 유원지 주차장 (강원네이처로드 1코스)</p>
+                <p class="drive-place-address">강원 춘천시 이디오피아길 13</p>
+                <p class="drive-place-desc">네이처로드 1코스 구간인 춘천 시내를 가로지르는 공지천을 따라 도보로 이어진 벚꽃길이다. 수도권과 가까워서 당일치기 가능하는 점!</p>
+            </div>
+
+            <div class="drive-image-gallery">
+                <img th:src="@{/images/sub11/sub11_2.jpg}" alt="벚꽃 명소 2">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">2. 영서고등학교(강원네이처로드 4코스)</p>
+                <p class="drive-place-address">강원 치악로 1384</p>
+                <p class="drive-place-desc">네이처로드 4코스 진입로에 있는 원주의 벚꽃 명소로 영서고등학교 앞 벚꽃길은 정문에서부터 천을 따라 여유롭게 걸을 수 있다.</p>
+            </div>
+
+            <div class="drive-image-gallery">
+                <img th:src="@{/images/sub11/sub11_3.jpg}" alt="벚꽃 명소 3">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-number">3.강릉 남산근린공원 (강원네이처로드 6코스)</p>
+                <p class="drive-place-address">강원 강릉시 노암동 737-24</p>
+                <p class="drive-place-desc">봄에 강릉에서 꼭 가야 하는 벚꽃 명소! 바다가 질린 그대여, 산으로 오라- 6코스 바다 드라이브길이 품은 언제나 산책하기 좋은 벚꽃 명소이다.</p>
+            </div>
+        </div>
+
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

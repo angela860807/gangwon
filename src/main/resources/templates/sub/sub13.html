@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 관광안내소</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+</head>
+<body>
+<div class="wrap">
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main>
+        <!-- 상단 헤더 -->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h2>여행 중 도움이 필요하다면 연락주세요.</h2>
+                    <h1>여행에 필요한 정보를 모두 드립니다.</h1>
+                </div>
+                <div class="breadcrumb">
+                    <span>HOME > 알아가기 > 관광안내소</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 관광안내소 카드 리스트 -->
+        <div class="card-container">
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">강릉시</div>
+                            <h3 class="title">도 종합관광안내센터<br>(강릉터미널)</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-640-4537</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 강릉시 하슬라로 27</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">춘천시</div>
+                            <h3 class="title">춘천역 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-250-4312</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 춘천시 평화로 1</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">춘천시</div>
+                            <h3 class="title">남춘천역 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-250-3322</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 춘천시 영서로 2260</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">춘천시</div>
+                            <h3 class="title">남면녹귀 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-250-4300</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 춘천시 신북면 김유정로 1430-14</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">원주시</div>
+                            <h3 class="title">원주역 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-733-1330</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 원주시 북원로 1860</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">원주시</div>
+                            <h3 class="title">간현관광지 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-733-1330</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 원주시 지정면 간현길 1036</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">강릉시</div>
+                            <h3 class="title">강릉역 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-642-8692</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 강릉시 용지로 176</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">강릉시</div>
+                            <h3 class="title">경포 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-640-4531</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 강릉시 안현동 산2-11</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">강릉시</div>
+                            <h3 class="title">주문진 관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-640-4535</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 강릉시 주문진읍 해안로 1740</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">동해시</div>
+                            <h3 class="title">망상 종합관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-530-2800</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 동해시 동해대로 6270-10</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">동해시</div>
+                            <h3 class="title">추암관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-530-2801</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 동해시 초내배화길 17-1</span></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="city">동해시</div>
+                            <h3 class="title">무릉관광안내소</h3>
+                        </div>
+                        <div class="location-icon">📍</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item"><span class="icon">📞</span><span>033-530-2802</span></div>
+                        <div class="info-item"><span class="icon">📍</span><span>강원특별자치도 동해시 삼화로 538</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

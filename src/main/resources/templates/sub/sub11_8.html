@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 영월 동강 축제</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/common_sub.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub1.css}">
+    <style>
+    .drive-image-gallery1 {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            }
+    .drive-image-gallery1 img {
+            width: 50%;
+            height: auto;
+            display: block;
+            }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <section class="sub_visual">
+        <img th:src="@{/images/sub11/sub_visual01.jpg}" alt="이야기속강원">
+        <h3>이야기속강원</h3>
+    </section>
+    <div class="bread-crumb">
+        <a th:href="@{/}">HOME</a>
+        <a href="#">알아가기</a>
+        <a href="#">이야기속강원</a>
+    </div>
+
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main id="sub">
+        <div class="drive-info-section">
+            <div class="drive-highlight-box">
+                <h3>동강! 여름을 품다 영월 동강 축제</h3>
+                <br>
+                <p>강원도 평창, 정선, 영월을 돌아 흐르는 동강은 깨끗한 강과 계곡으로 많은 사람들이 찾는 곳입니다.
+                    <br>
+                    특히 래프팅의 명소로도 잘 알려져 있는데요,
+                    <br>
+                    박물관의 고장 영월에서는 해마다 다양한 체험과 함께 동강을 즐길 수 있는 프로그램을 만들어 영월 동강 축제를 열고 있습니다.
+                    <br>
+                    주변에 김삿갓유적지, 장릉, 청령포, 고씨동굴, 별마로천문대 등
+                    <br>
+                    다양한 볼거리와 역사문화를 만날 수 있는 영월로 여름 사냥을 떠나봅니다.
+                </p>
+            </div>
+
+            <p class="drive-section-label">&lt;참고 강원네이처로드 매거진&gt;</p>
+            <h3 class="drive-route-title">강원도 축제 추천 여행 매거진 - 강원네이처로드</h3>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_20.jpg}" alt="영월 동강 축제">
+                <img th:src="@{/images/sub11/sub11_20_1.jpg}" alt="영월 동강 축제">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-desc">축제 첫날에는 축제의 시작을 알리는 개막축하공연과 함께 불꽃놀이가 펼쳐집니다.
+                    <br>
+                    즐거운 공연과 함께 여름밤을 장식할 불꽃놀이 놓치지 말고 참여해보세요.
+                    <br>
+                    낮에 느꼈던 찌는 듯 한 더위가 한 번에 날아가는 기분입니다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_20_2.jpg}" alt="영월 동강 축제">
+                <img th:src="@{/images/sub11/sub11_20_3.jpg}" alt="영월 동강 축제">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-desc">영월동강축제에서는 다양한 체험도 즐길 수가 있는데요,
+                    <br>
+                    특히 지붕 없는 박물관 고을로 알려진 영월의 다양한 박물관을 체험하는 '영월 박물관이 다 모였네!'
+                    <br>
+                    라는 박물관 체험은 아이들과 평소 관심이 있던 여러 분야의 박물관 정보를 한 곳에서 만날 수 있습니다.
+                    <br>
+                </p>
+            </div>
+
+            <div class="drive-image-gallery1">
+                <img th:src="@{/images/sub11/sub11_20_4.jpg}" alt="영월 동강 축제">
+                <img th:src="@{/images/sub11/sub11_20_5.jpg}" alt="영월 동강 축제">
+            </div>
+
+            <div class="drive-place-info">
+                <p class="drive-place-desc">뗏목, 카누, 용선 등 다양한 배를 직접 타는 체험도 준비가 되어 있습니다.
+                    <br>
+                    오래 전부터 동강 위를 오가며 사람들의 이동 수단이 되어 왔던 뗏목체험과 재미있는 카누타기, 중국 자귀현에서 직접 제작하여 온 용선 등
+                    <br>
+                    다양한 모양의 배도 타고 더위를 시원하게 날려보세요.
+                    <br>
+                    귀뚜라미가 밤새 소리 내는 여름밤의 추억과 낭만을 즐기러 영월 동강으로 떠나보세요~
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="pager">
+            <span class="pager-num">1/1</span>
+            <a class="pager-link active">1</a>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

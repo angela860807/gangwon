@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 강원도 관광</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <style>
+        body { background-color: #f0f0f0; min-height: 100vh; }
+        .wrap { min-height: 100vh; display: flex; flex-direction: column; }
+        #hd {
+            position: relative !important;
+            background: linear-gradient(135deg, rgba(137,25,155,0.9) 0%, rgba(160,17,71,0.9) 50%, rgba(179,9,1,0.9) 100%) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+        }
+        .content { flex: 1; display: flex; align-items: center; justify-content: center; padding: 120px 20px 80px; }
+        .form_wrap { width: 100%; max-width: 500px; position: relative; }
+        .login_card { background-color: #fff; border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 80px 50px 50px; position: relative; margin-top: 50px; }
+        .lock_icon { width: 100px; height: 100px; background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); border-radius: 50%; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(137,25,155,0.4); font-size: 40px; }
+        .sec_tit { font-size: 32px; font-weight: 700; color: #333; margin-bottom: 40px; text-align: center; }
+        .form1 { width: 100%; }
+        .txt_ctrl { display: block; width: 100%; line-height: 56px; margin-bottom: 16px; padding: 0 20px; border: 2px solid #e0e0e0; border-radius: 12px; font-size: 16px; transition: all 0.3s; background-color: #fafafa; }
+        .txt_ctrl:focus { outline: none; border-color: #6366f1; background-color: #fff; box-shadow: 0 0 0 4px rgba(99,102,241,0.1); }
+        .btn_con { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+        .btn_ctrl { display: block; width: 100%; border-radius: 12px; line-height: 56px; text-align: center; border: none; outline: none; cursor: pointer; font-weight: 600; font-size: 16px; transition: all 0.3s; text-decoration: none; }
+        .btn_ctrl.login { background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); color: #fff; box-shadow: 0 4px 16px rgba(137,25,155,0.3); }
+        .btn_ctrl.login:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(137,25,155,0.4); }
+        .btn_ctrl.join { background: #fff; color: #89199b; border: 2px solid #89199b; }
+        .btn_ctrl.join:hover { background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); color: #fff; border-color: transparent; }
+        .error-msg { color: #e53e3e; font-size: 14px; margin-bottom: 10px; text-align: center; }
+        .success-msg { color: #38a169; font-size: 14px; margin-bottom: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <main class="content">
+        <div class="form_wrap">
+            <div class="login_card">
+                <div class="lock_icon">🔒</div>
+                <h3 class="sec_tit">회원 로그인</h3>
+                <p class="success-msg" th:if="${param.registered}">회원가입이 완료되었습니다. 로그인해주세요.</p>
+                <p class="error-msg" th:if="${errorMsg}" th:text="${errorMsg}"></p>
+                <form th:action="@{/member/login}" method="post" class="form1">
+                    <input type="text" name="userId" class="txt_ctrl" placeholder="아이디" required autofocus/>
+                    <input type="password" name="password" class="txt_ctrl" placeholder="비밀번호" required/>
+                    <div class="btn_con">
+                        <button type="submit" class="btn_ctrl login">로그인</button>
+                        <a th:href="@{/member/terms}" class="btn_ctrl join">회원가입</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

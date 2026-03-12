@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원도 관광 - 자연</title>
+    <link rel="icon" type="image/png" th:href="@{/images/common/favicon3.png}">
+    <link rel="stylesheet" th:href="@{/common.css}">
+    <link rel="stylesheet" th:href="@{/font.css}">
+    <link rel="stylesheet" th:href="@{/sub/sub41.css}">
+</head>
+<body>
+<div class="wrap">
+
+    <section class="sub_visual">
+        <img th:src="@{/images/common/sub3.jpg}" alt="서브 이미지3" class="visual_img">
+        <th:block th:replace="~{fragments/header :: header}"></th:block>
+        <h3 class="sub_title">자연</h3>
+    </section>
+
+    <div class="tab-bx">
+        <div class="inner">
+            <div class="bread-crumb">
+                <a th:href="@{/}">HOME</a>
+                <a href="#">볼거리</a>
+                <a href="#">자연</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-area">
+
+            <div class="check-bx">
+                <h4>지역</h4>
+                <fieldset>
+                    <div><input type="checkbox" id="area_all"><label for="area_all">전체</label></div>
+                    <div><input type="checkbox" id="area_cc"><label for="area_cc">춘천시</label></div>
+                    <div><input type="checkbox" id="area_wj"><label for="area_wj">원주시</label></div>
+                    <div><input type="checkbox" id="area_gn"><label for="area_gn">강릉시</label></div>
+                    <div><input type="checkbox" id="area_dh"><label for="area_dh">동해시</label></div>
+                    <div><input type="checkbox" id="area_tb"><label for="area_tb">태백시</label></div>
+                    <div><input type="checkbox" id="area_sc"><label for="area_sc">속초시</label></div>
+                    <div><input type="checkbox" id="area_sck"><label for="area_sck">삼척시</label></div>
+                    <div><input type="checkbox" id="area_hcg"><label for="area_hcg">홍천군</label></div>
+                    <div><input type="checkbox" id="area_hs"><label for="area_hs">횡성군</label></div>
+                    <div><input type="checkbox" id="area_yw"><label for="area_yw">영월군</label></div>
+                    <div><input type="checkbox" id="area_pc"><label for="area_pc">평창군</label></div>
+                    <div><input type="checkbox" id="area_js"><label for="area_js">정선군</label></div>
+                    <div><input type="checkbox" id="area_cw"><label for="area_cw">철원군</label></div>
+                    <div><input type="checkbox" id="area_hc"><label for="area_hc">화천군</label></div>
+                    <div><input type="checkbox" id="area_yg"><label for="area_yg">양구군</label></div>
+                    <div><input type="checkbox" id="area_ij"><label for="area_ij">인제군</label></div>
+                    <div><input type="checkbox" id="area_gs"><label for="area_gs">고성군</label></div>
+                    <div><input type="checkbox" id="area_yy"><label for="area_yy">양양군</label></div>
+                </fieldset>
+                <input type="submit" value="검색" class="skinBtnBo">
+            </div>
+
+            <!-- Search Area -->
+            <div class="search-area">
+                <select>
+                    <option value="" selected>전체</option>
+                    <option value="B">최신순</option>
+                    <option value="H">인기순</option>
+                </select>
+                <select>
+                    <option value="TITLE" selected>제목</option>
+                    <option value="CONTENT">내용</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력해주세요.">
+                <input type="submit" value="검색">
+            </div>
+
+            <!-- Attraction List -->
+            <div class="attraction-list">
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#관광농원</i><img th:src="@{/images/sub41/sub4_01.jpg}" alt="강릉안반데기관광농원"></div>
+                    <div class="text"><em>강릉시</em><strong>강릉안반데기관광농원</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#식물원</i><img th:src="@{/images/sub41/sub4_02.jpg}" alt="설악산 자생식물원"></div>
+                    <div class="text"><em>속초시</em><strong>설악산 자생식물원</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#설악산</i><img th:src="@{/images/sub41/sub4_03.jpg}" alt="설악산"></div>
+                    <div class="text"><em>속초시</em><strong>설악산</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#영랑호</i><img th:src="@{/images/sub41/sub4_04.jpg}" alt="영랑호"></div>
+                    <div class="text"><em>속초시</em><strong>영랑호</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#전망대</i><img th:src="@{/images/sub41/sub4_05.jpg}" alt="속초등대전망대"></div>
+                    <div class="text"><em>속초시</em><strong>속초등대전망대</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#청대산</i><img th:src="@{/images/sub41/sub4_06.jpg}" alt="청대산"></div>
+                    <div class="text"><em>속초시</em><strong>청대산</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#바다</i><img th:src="@{/images/sub41/sub4_07.jpg}" alt="바다향기로"></div>
+                    <div class="text"><em>속초시</em><strong>바다향기로</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#공원</i><img th:src="@{/images/sub41/sub4_08.jpg}" alt="설악해맞이공원"></div>
+                    <div class="text"><em>속초시</em><strong>설악해맞이공원</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#호수</i><img th:src="@{/images/sub41/sub4_09.jpg}" alt="영랑호수윗길"></div>
+                    <div class="text"><em>속초시</em><strong>영랑호수윗길</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#해수욕장</i><img th:src="@{/images/sub41/sub4_10.jpg}" alt="속초해수욕장"></div>
+                    <div class="text"><em>속초시</em><strong>속초해수욕장</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#탐방로</i><img th:src="@{/images/sub41/sub4_11.jpg}" alt="덕봉산 해안생태탐방로"></div>
+                    <div class="text"><em>삼척시</em><strong>덕봉산 해안생태탐방로</strong></div>
+                </a>
+                <a href="#" class="attraction-card">
+                    <div class="thumb"><i class="spot">#미인폭포</i><img th:src="@{/images/sub41/sub4_12.jpg}" alt="미인폭포"></div>
+                    <div class="text"><em>삼척시</em><strong>미인폭포</strong></div>
+                </a>
+            </div>
+
+            <!-- Pager -->
+            <div class="pager">
+                <a href="#" class="nav-btn">&laquo;</a>
+                <a href="#" class="nav-btn">&lsaquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="nav-btn">&rsaquo;</a>
+                <a href="#" class="nav-btn">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- Download -->
+        <a href="#" class="form-down">
+            <img th:src="@{/images/sub41/sub4_13.jpg}" alt="신청양식 다운로드">
+        </a>
+    </main>
+
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</body>
+</html>

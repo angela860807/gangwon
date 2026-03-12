@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* ===== 알림소식 페이지 전용 CSS ===== */
+
+/* 상단 헤더 */
+.notice-header {
+    background-image: url(../images/sub51/info_visual04.jpg);
+    padding: 150px 20px;
+    color: white;
+}
+
+.notice-header .notice-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.notice-header-text h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.notice-header-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.notice-breadcrumb {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* 검색 영역 */
+.search-area {
+    background: #f5f5f5;
+    padding: 30px 20px;
+}
+
+.search-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-select {
+    width: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+}
+
+.search-input {
+    width: 500px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-input:focus {
+    border-color: rgb(155, 93, 229);
+    outline: none;
+}
+
+.search-btn {
+    padding: 12px 30px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-btn:hover {
+    background: #555;
+}
+
+/* 게시판 테이블 */
+.board-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.board-table {
+    width: 100%;
+    border-top: 2px solid #333;
+    border-collapse: collapse;
+}
+
+.board-table th {
+    background: #f8f8f8;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.board-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.col-num {
+    width: 80px;
+}
+
+.col-title {
+    width: auto;
+}
+
+.col-writer {
+    width: 120px;
+}
+
+.col-date {
+    width: 120px;
+}
+
+.col-views {
+    width: 80px;
+}
+
+.title-cell {
+    text-align: left;
+}
+
+.title-cell a {
+    color: #333;
+    display: block;
+}
+
+.title-cell a:hover {
+    color: rgb(155, 93, 229);
+    text-decoration: underline;
+}
+
+/* 페이징 */
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.page-btn,
+.page-num {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.page-btn:hover,
+.page-num:hover {
+    background: #f5f5f5;
+}
+
+.page-num.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* 시군별 신고센터 카드 */
+.city-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.city-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    background: #fff;
+    width: calc(25% - 15px);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.city-card:hover {
+    background: linear-gradient(90deg, rgb(155, 93, 229) 0%, rgb(241, 91, 181) 50%, rgb(238, 108, 77) 100%);
+    transform: translateY(-5px);
+}
+
+.city-card:hover .city-name, 
+.city-card:hover .city-label {
+    color: #fff;
+}
+
+.card-icon {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.city-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.city-label {
+    font-size: 14px;
+    color: #888;
+    position: relative;
+    z-index: 1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .city-card {
+        width: calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    .notice-header-text h1 {
+        font-size: 24px;
+    }
+    
+    .notice-header-text h2 {
+        font-size: 16px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-select,
+    .search-input {
+        width: 100%;
+    }
+    
+    .board-table {
+        font-size: 12px;
+    }
+    
+    .board-table th,
+    .board-table td {
+        padding: 10px 5px;
+    }
+    
+    .col-writer,
+    .col-views {
+        display: none;
+    }
+    
+    .city-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .city-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .notice-header {
+        padding: 40px 20px;
+    }
+    
+    .notice-header-text h1 {
+        font-size: 20px;
+    }
+    
+    .board-table th,
+    .board-table td {
+        padding: 8px 3px;
+        font-size: 11px;
+    }
+    
+    .title-cell a {
+        font-size: 12px;
+    }
+}
